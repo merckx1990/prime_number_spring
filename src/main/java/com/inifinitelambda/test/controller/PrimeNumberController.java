@@ -20,7 +20,7 @@ public class PrimeNumberController {
     @Autowired
     private PrimeNumberService service;
 
-    @GetMapping(value = "/test/{number}")
+    @GetMapping(value = "/isPrime/{number}")
     public ResponseEntity<Boolean> isPrimeNumber(@PathVariable Long number) {
         if (number == null) {
             return ResponseEntity.badRequest().build();
